@@ -2,19 +2,19 @@
 # -*- coding: utf-8 -*-
 
 """
-annotate_with_medtxtner_hpo_batch.py
+annotate_medtxtner_batch.py
 
-MedTXTNER + n-gram + NER + Negation を使って、
-入力 CSV の各行（例: medical_history_nobr）から HPO を抽出し、
-JSONL 形式で出力するバッチスクリプト。
+MedTXTNER の埋め込み + n-gram + NER + Negation を組み合わせ、
+入力 CSV の各行（例: medical_history_nobr）から HPO を抽出して
+JSONL で書き出すバッチスクリプト。
 
 前提:
-  - 生成済み患者表現の MedTXTNER 埋め込み (.npy)
-  - それに対応する JSONL (HPO_ID 付き; patient_expression_final など)
-  - 上記 2 つは既存の embed_with_medtxtner.py などで作成済み
+    - 生成済み患者表現の MedTXTNER 埋め込み (.npy)
+    - それに対応する JSONL (HPO_ID 付き; patient_expression_final など)
+    - 上記 2 つは embed_expressions_medtxtner.py などで作成済み
 
 依存:
-  - annotate_with_ngrams_medtxtner_nerneg.py
+    - annotate_ngram_medtxtner.py
     - MedTxtNerHelper
     - SudachiTokenizerWrapper
     - detect_assertion
@@ -68,7 +68,7 @@ except ImportError:
     HAS_WANDB = False
 
 # 既存の n-gram + NER + Negation 実装を利用
-from annotate_with_ngrams_medtxtner_nerneg import (
+from annotate_ngram_medtxtner import (
     MedTxtNerHelper,
     SudachiTokenizerWrapper,
     detect_assertion,

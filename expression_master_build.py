@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """
-5a.build_expression_master.py
+expression_master_build.py
 
-患者表現 / 医師表現の Judge+Refine 済み JSONL をマージして，
+患者表現 / 医師表現の生成・精査済み JSONL をマージし，
 HPO ごとの表現マスタ JSONL を作るスクリプト。
 
 想定する入力:

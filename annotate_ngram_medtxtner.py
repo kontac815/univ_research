@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-annotate_with_ngrams_medtxtner_nerneg.py
+annotate_ngram_medtxtner.py
 
 - 生成済み患者表現の MedTXTNER 埋め込み (.npy) + JSONL (HPO_ID 付き) を読み込み
 - 入力文を Sudachi で分かち書き（トークン＋文字オフセットを取得）

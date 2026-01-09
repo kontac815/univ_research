@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-07_translate_definitions_gpt5_parallel.py
+hpo_definition_translate.py
 
-GPT-5-mini を利用して HPO の英語定義を日本語に翻訳するスクリプト。
-ThreadPoolExecutor による並列処理で高速化を行っています。
-東北大学プロキシ環境対応版。
+GPT-5系モデルで HPO 英語定義を日本語化する並列翻訳スクリプト。
+ThreadPoolExecutor で複数行を同時処理し、既存の翻訳はログで再利用する。
 """
 
 import argparse
@@ -19,9 +18,6 @@ from openai import OpenAI
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# --- プロキシ設定 ---
-os.environ["HTTP_PROXY"] = "http://proxy.l2.med.tohoku.ac.jp:8080"
-os.environ["HTTPS_PROXY"] = "http://proxy.l2.med.tohoku.ac.jp:8080"
 
 # ログ書き込み用のロック（並列処理時の競合防止）
 log_lock = threading.Lock()

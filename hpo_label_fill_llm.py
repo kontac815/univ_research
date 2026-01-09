@@ -2,12 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-06_fill_hpo_jp_with_llm.py
+hpo_label_fill_llm.py
 
-HPO マスタ / サブセット CSV のうち、
-jp_final が欠損している symptom 系 HPO について、
-OpenAI API（Chat Completions）を用いて日本語ラベルを自動生成し、
-CSV を更新するスクリプト。
+HPO マスタ/サブセットの jp_final 欠損を OpenAI Chat API で補完し、
+CSV を安全に更新するスクリプト（キャッシュ/ログで再実行可）。
 
 想定している前提:
   - マスタ: ../data/hpo_master_all_jp.weblio.csv

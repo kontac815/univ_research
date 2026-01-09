@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-embed_with_medtxtner.py
+embed_expressions_medtxtner.py
 
 生成済みの患者／医師表現を `sociocom/MedTXTNER` で埋め込みベクトルに変換するスクリプト。
 

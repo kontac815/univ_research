@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-embed_with_sbert.py
+embed_expressions_sbert.py
 
 HPO 患者/医師表現の JSONL を読み込み、
 pkshatech/GLuCoSE-base-ja-v2 などの Sentence-BERT で埋め込み (.npy) を作る。

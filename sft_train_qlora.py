@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-2d.train_sft_qlora.py (stable)
+sft_train_qlora.py (stable)
 
 QLoRA + (optional DeepSpeed) SFT training script.
 - JSONL input: each line is a sample:

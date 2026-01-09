@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-eval_hpo_annotation_medtxtner.py
+eval_medtxtner_annotations.py
 
 MedTXTNER + n-gram + FAISS による HPO 抽出結果を、
 hpo_annotation_test_dataset.csv に対して評価するスクリプト。
@@ -17,7 +17,7 @@ hpo_annotation_test_dataset.csv に対して評価するスクリプト。
   - gold CSV: hpo_annotation_test_dataset.csv
       * ID 列: family_name (または patient_name 等)
       * gold HPO 列: hpo_ids ("HP:0001250 HP:0025356" のような空白区切り)
-  - pred JSONL: annotate_with_medtxtner_hpo_batch.py の出力
+    - pred JSONL: annotate_medtxtner_batch.py の出力
       * 各行: {
             "input_id": "...",
             "annotations": [

@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 
 """
-5a.postprocess_expressions_sbert.py (With Deletion Log)
+expression_filter_sbert.py (with deletion log)
 
-HPO 患者/医師表現の「最終 JSONL」に対してフィルタリングを行い、
-クリーンな辞書と、削除されたレコードのログを出力する。
+HPO 患者/医師表現の生成結果 JSONL をフィルタし、
+クリーンな辞書と削除ログを出力するスクリプト。
 
 処理フロー:
   1) HPO日本語ラベルと同一の表現を除外

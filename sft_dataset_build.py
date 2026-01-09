@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
+sft_dataset_build.py
+
 NAIST大規模患者表現辞書 & MANBYO_20210602.xlsx から、
 HPO ラベル + (あれば) 定義 → 患者/医師表現生成用の SFT データを作成する。
 

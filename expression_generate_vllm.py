@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Unified Pattern B パイプライン (患者 / 医師 両対応) - vLLM Version
-生成のみ (Judge/Refine なし)
+expression_generate_vllm.py
 
-- vllm_pipeline.py をベースに、Judge/Refine ループを削除
-- 1c.build_hpo_sft_from_naist_manbyo_fullft.py と同じ「定義あり/なしでプロンプト切替」を反映
+患者/医師両方の表現を vLLM で生成するスクリプト（Judge/Refine なし）。
+元の vllm_pipeline を簡素化し、sft_dataset_build.py と同じ定義あり/なしプロンプトを使用。
 """
 
 from __future__ import annotations
